@@ -9,7 +9,13 @@
    
    <form method="POST">
     {% csrf_token %}
-    {{form.as_p}}
+    {{form.first_name.label_tag}} {{ form.first_name }}
+    <div>
+        <p>
+            {{ form.last_name.label_tag }} {{ form.last_name }}
+        </p>
+    </div>
+    
     <input type="submit">
    </form>
 </body>
