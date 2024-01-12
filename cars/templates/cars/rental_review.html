@@ -9,6 +9,8 @@
    
    <form method="POST">
     {% csrf_token %}
+
+    <!-- form ini diambil dari context={form:form} page views.py -->
     {{form.first_name.label_tag}} {{ form.first_name }}
     <div>
         <p>
